@@ -1,0 +1,5 @@
+<app-subject-form
+*ngFor="let item of subjectFormAry.controls; let i=index"
+[index]="i" [item]="item" (removed)="subjectFormAry.removeAt($event)">
+</app-subject-form>
+<button type="button" class="btn btn-link" (click)="addItem()">Add Subject</button>

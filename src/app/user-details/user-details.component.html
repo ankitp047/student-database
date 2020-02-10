@@ -1,0 +1,27 @@
+<form [formGroup]="userForm" (ngSubmit)="submit()">
+    <h4>Form</h4>
+    <hr>
+    <app-user-form formArrayName="details"
+        [userForm]="userForm.get('details')">
+    </app-user-form>
+    <hr>
+    <div class="form-group" *ngIf="ADD==true">
+        <input type="submit" class="form-control" value="Submit User" [disabled]="userForm?.invalid">
+    </div>
+</form>
+
+<form [formGroup]="subjectForm" *ngIf="ADD!=true" (ngSubmit)="submitSubject()">
+    <h4>Subjects</h4>
+    <hr>
+    <app-subject formArrayName="subjects"
+        [subjectFormAry]="subjectForm.get('subjects')">
+    </app-subject>
+    <hr>
+    <div class="form-group" >
+        <input type="submit" class="form-control" value="Submit Subjects" [disabled]="userForm?.invalid">
+    </div>
+</form>
+
+
+<button raised-button [routerLink]="['/student-master',{id:id}]" routerLinkActive="router-link-active" >Student Master</button>
+

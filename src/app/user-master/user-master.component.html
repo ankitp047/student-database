@@ -1,0 +1,4 @@
+<div *ngFor="let item of userList;let i = index">
+    <button mat-button [routerLink]="['/user-details',{id:i}]" routerLinkActive="router-link-active" >{{item.userName}}</button>
+</div>
+<button mat-button [routerLink]="['/user-details',{id:-1}]" routerLinkActive="router-link-active" >+ Add User</button>

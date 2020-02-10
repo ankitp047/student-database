@@ -1,0 +1,14 @@
+<div class="example-form" [formGroup]="item">
+    <mat-form-field class="example-full-width">
+      <mat-label>Subject Name</mat-label>
+      <input matInput placeholder="" [attr.id]="'subjectName'+index" formControlName="subjectName" >
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+      <mat-label>Max Marks</mat-label>
+      <input matInput placeholder="" [attr.id]="'maxMarks'+index" formControlName="maxMarks" >
+    </mat-form-field>
+    <!-- <mat-form-field class="example-full-width">
+      <mat-label>Marks Obtained</mat-label>
+      <input matInput placeholder="" [attr.id]="'obtainedMarks'+index" formControlName="obtainedMarks" >
+    </mat-form-field> -->
+</div>
